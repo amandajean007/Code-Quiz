@@ -10,7 +10,7 @@ This project uses HTML, Javascript and CSS
 In order to launch this project, go to amandajean007.githib.io/code-quiz/
 
 ## Illustrations
-![screenshot](../Assets/Capture.png)
+![screenshot](https://github.com/amandajean007/Code-Quiz/blob/main/Assets/Capture.PNG)
 
 ## Scope of functionalities
 This quiz can help you study in for a timed test.
