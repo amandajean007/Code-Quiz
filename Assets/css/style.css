@@ -1,0 +1,91 @@
+body{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: #333;
+  font-weight: 300;
+  text-align: center;
+  background-image: url(../whitediamond.png);
+  background-size: cover;
+}
+
+h1{
+  font-weight: 300;
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.welcome {
+  font-size: 90px;
+  color: rgb(150, 0, 70);
+  font-family: 'Otomanopee One', sans-serif;
+}
+
+.question{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.answers {
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+.answers label{
+  display: block;
+  margin-bottom: 0px;
+}
+
+button{
+  font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+	background-color: rgb(149, 149, 199);
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+button:hover{
+	background-color: rgb(113, 113, 148);
+}
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: x-large;
+  vertical-align: middle;
+}
+
+#results {
+  margin: 20px;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.countdown {
+  font-family: 'Roboto', sans-serif;
+}
+
