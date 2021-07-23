@@ -70,10 +70,7 @@ function showResults(){
       // color the answers green
       answerContainers[questionNumber].style.color = 'lightgreen';
       timeLeft + 0;
-    }
-
-      // if answer is wrong or blank
-    else{
+    } else{
       // color the answers red
       answerContainers[questionNumber].style.color = 'red';
       timeLeft -= 5;
@@ -250,6 +247,7 @@ startButton.addEventListener("click", showNextSlide);
 previousButton.addEventListener("click", showPreviousSlide);
 nextButton.addEventListener("click", showNextSlide);
 nextButton.addEventListener("click", showResults);
+submitButton.addEventListener('click', showResults);
 submitButton.addEventListener('click', end);
 submitButton.addEventListener('click', stopTimer);
 refreshButton.addEventListener('click', firstSlide);
