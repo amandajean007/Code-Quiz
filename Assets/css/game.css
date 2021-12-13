@@ -1,5 +1,5 @@
-@media screen and (max-width: 700px) {
-	.choice-container {
+@media screen and (max-width: 768px) {
+	.choiceContainer {
 		min-width: 40rem;
 	}
 }
@@ -9,7 +9,7 @@
 	width: 100%;
 	border-radius: 4px;
 	font-size: 2rem;
-	min-width: 80rem;
+	/* min-width: 80rem; */
 	background: linear-gradient(90deg, rgba(239, 255, 18, 0.2) 0%, rgba(25, 197, 25, 0.2) 100%);
 	margin-bottom: 0.8rem;
 }
