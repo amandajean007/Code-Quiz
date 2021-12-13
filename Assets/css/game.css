@@ -11,6 +11,8 @@
 	font-size: 2rem;
 	/* min-width: 80rem; */
 	background: linear-gradient(90deg, rgba(239, 255, 18, 0.2) 0%, rgba(25, 197, 25, 0.2) 100%);
+	/* background: linear-gradient(90deg, rgba(255, 18, 255, 0.200) 0%, rgba(197, 151, 25, 0.2) 100%); */
+
 	margin-bottom: 0.8rem;
 }
 
