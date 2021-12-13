@@ -1,13 +1,21 @@
   // Variables
-const timerEl = document.getElementById('countdown');
-var timeLeft = 30;
-const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
-const submitButton = document.getElementById('submit');
-const startButton = document.getElementById('start');
+var question = document.querySelector("#question");
+var choices = document.querySelector(".choice-text");
+var scoreText = document.querySelector("#score");
+var timerEl = document.querySelector('#countdown');
+var quizContainer = document.querySelector('#quiz');
+
+var currentQuestion = {};
+var acceptedAnswers = true;
+var score = 0;
+var qCounter = 0;
+var timeLeft = 60;
+var resultsContainer = document.querySelector('#results');
+var submitButton = document.querySelector('#submit');
+var startButton = document.querySelector('#start');
   // keep track of user's answers
 var numCorrect = 0;
-const myQuestions = [
+var myQuestions = [
   {
     question: "1. Commonly used data types DO NOT include:",
     answers: {
@@ -50,41 +58,42 @@ const myQuestions = [
   }
 ];
 
+var scorePoints = 10;
+var maxQuestions = 5;
+
+
 function showResults(){
   // gather answer containers from our quiz
-  const answerContainers = quizContainer.querySelectorAll('.answers');
+  var answerContainers = quizContainer.querySelectorAll('.answers');
 
   // for each question...
   myQuestions.forEach( (currentQuestion, questionNumber) => {
-
+   
     // find selected answer
-    const answerContainer = answerContainers[questionNumber];
-    const selector = `input[name=question${questionNumber}]:checked`;
-    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-
+    var answerContainer = answerContainers[questionNumber];
+    var selector = `input[name=question${questionNumber}]:checked`;
+    var userAnswer = (answerContainer.querySelector(selector) || {}).value;
+console.log(userAnswer);
+console.log(currentQuestion.correctAnswer);
     // if answer is correct
     if(userAnswer === currentQuestion.correctAnswer){
       // add to the number of correct answers
       numCorrect++;
 
       // color the answers green
-      answerContainers[questionNumber].style.color = 'lightgreen';
+      answerContainer[questionNumber].style.color = 'lightgreen';
       timeLeft + 0;
-    } else{
+    } else {
       // color the answers red
-      answerContainers[questionNumber].style.color = 'red';
+      answerContainer[userAnswer].style.color = 'red';
       timeLeft -= 5;
     }
-
-  // Appends tag as child of document body
-  var linebreak = document.createElement('br');
-  document.body.appendChild(tag).appendChild(linebreak);
 });
 }
 
 function buildQuiz(){
   // variable to store the HTML output
-  const output = [];
+  var output = [];
   output.push(
     '<div class="slide"></div>'
     );
@@ -92,7 +101,7 @@ function buildQuiz(){
   myQuestions.forEach(
     (currentQuestion, questionNumber) => {
       // variable to store the list of possible answers
-      const answers = [];
+      var answers = [];
 
       // and for each available answer...
       for(letter in currentQuestion.answers){
@@ -158,7 +167,7 @@ function firstSlide() {
   window.location.reload(true); 
   
   // uncheck all radio buttons
-  document.getElementById("radioBtn").checked = false;
+  document.querySelector("#radioBtn").checked = false;
 }
 
 function stopTimer() {
@@ -169,7 +178,7 @@ function resetQuestions() {
   myQuestions.forEach(
     (currentQuestion, questionNumber) => {
       // variable to store the list of possible answers
-      const answers = [];
+      var answers = [];
 
       // and for each available answer...
       for(letter in currentQuestion.answers){
@@ -232,10 +241,10 @@ function countdown() {
 buildQuiz();
 
 // Pagination
-const previousButton = document.getElementById("previous");
-const nextButton = document.getElementById("next");
-const refreshButton = document.getElementById("refresh");
-const slides = document.querySelectorAll(".slide");
+var previousButton = document.querySelector("#previous");
+var nextButton = document.querySelector("#next");
+var refreshButton = document.querySelector("#refresh");
+var slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
 
 // Show the first slide

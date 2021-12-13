@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+/* Type */
 body{
 	font-size: 20px;
 	font-family: 'Roboto', sans-serif;
@@ -6,36 +10,6 @@ body{
   text-align: center;
   background-image: url(../whitediamond.png);
   background-size: cover;
-}
-
-h1{
-  font-weight: 300;
-  margin: 0px;
-  padding: 10px;
-  font-size: 20px;
-  color: #fff;
-}
-
-.welcome {
-  font-size: 90px;
-  color: rgb(150, 0, 70);
-  font-family: 'Otomanopee One', sans-serif;
-}
-
-.question{
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.answers {
-  margin-bottom: 20px;
-  text-align: left;
-  display: inline-block;
-}
-
-.answers label{
-  display: block;
-  margin-bottom: 0px;
 }
 
 button{
@@ -54,6 +28,104 @@ button:hover{
 	background-color: rgb(113, 113, 148);
 }
 
+h1{
+  font-weight: 300;
+  margin: 5rem;
+  font-size: 5.4rem;
+}
+
+h2{
+  font: size 4.2rem;
+  margin-bottom: 4rem;
+}
+
+/* Class */
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+
+.answers {
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+.answers label{
+  display: block;
+  margin-bottom: 0px;
+}
+
+.btn {
+  font-size: 2.4rem;
+  padding: 2rem;
+  width: 30rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color:#333;
+  border-radius: 4px;
+  background: linear-gradient(90deg, rgba(255, 18, 255, 0.200) 0%, rgba(197, 151, 25, 0.2) 100%)
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4 rem 0 rgb(68, 0, 32);
+  transition: transform 150ms;
+  transform: scale(1.03);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.countdown {
+  font-family: 'Roboto', sans-serif;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.justify-content {
+  justify-content: center;
+}
+
+.question{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.quiz-container{
+  position: relative;
+  height: 300px;
+  margin-top: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: x-large;
+  vertical-align: middle;
+}
+
+.red {
+  background-color: red;
+}
+
 .slide{
   position: absolute;
   left: 0px;
@@ -64,20 +136,17 @@ button:hover{
   transition: opacity 0.5s;
 }
 
-.active-slide{
-  opacity: 1;
-  z-index: 2;
+.text-center {
+  text-align: center;
 }
 
-.quiz-container{
-  position: relative;
-  height: 200px;
-  margin-top: 40px;
-  font-family: 'Roboto', sans-serif;
-  font-size: x-large;
-  vertical-align: middle;
+.welcome {
+  font-size: 90px;
+  color: rgb(150, 0, 70);
+  font-family: 'Otomanopee One', sans-serif;
 }
 
+/* ID */
 #results {
   margin: 20px;
   padding: 10px;
@@ -85,7 +154,5 @@ button:hover{
   font-family: 'Roboto', sans-serif;
 }
 
-.countdown {
-  font-family: 'Roboto', sans-serif;
-}
+
 
