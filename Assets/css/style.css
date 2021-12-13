@@ -30,7 +30,7 @@ button:hover{
 
 h1{
   font-weight: 300;
-  margin: 5rem;
+  margin-bottom: 4rem;
   font-size: 5.4rem;
 }
 
@@ -126,10 +126,6 @@ h2{
   font-family: 'Roboto', sans-serif;
   font-size: x-large;
   vertical-align: middle;
-}
-
-.red {
-  background-color: red;
 }
 
 .slide{
