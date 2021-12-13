@@ -70,9 +70,15 @@ h2{
 
 .btn:hover {
   cursor: pointer;
-  box-shadow: 0 0.4rem 1.4 rem 0 rgb(68, 0, 32);
+  box-shadow: 0 0.4rem 1.4 rem 0 rgb(255, 0, 119);
   transition: transform 150ms;
   transform: scale(1.03);
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }
 
 .container {
@@ -147,6 +153,14 @@ h2{
 }
 
 /* ID */
+#highscore-btn {
+  background: linear-gradient(90deg, rgba(18, 34, 255, 0.2) 0%, rgba(25, 197, 25, 0.2) 100%)
+}
+
+#highscore-btn {
+  box-shadow: 0 0.4rem 1.4 rem 0 rgb(0, 89, 255);
+}
+
 #results {
   margin: 20px;
   padding: 10px;
