@@ -59,6 +59,8 @@ startGame = () => {
 getNewQuestion = () => {
   if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
     localStorage.setItem('mostRecentScore', score);
+    localStorage.setItem('timeLeft', time);
+
     return window.location.assign('end.html')
   }
 
@@ -93,6 +95,9 @@ choices.forEach(choice => {
     if(classToApply === 'correct') {
       incrementScore(SCORE_POINTS);
     }
+    if(classToApply === 'incorrect') {
+      decrementTime(time);
+    }
 
     selectedChoice.parentElement.classList.add(classToApply);
 
@@ -107,6 +112,27 @@ choices.forEach(choice => {
 incrementScore = num => {
   score +=num;
   scoreText.innerText = score;
+}
+
+
+/* Timer */
+var time = 60;
+
+timeFunction = () => {
+  time = time - 1;
+  if (time < 60) {
+    timer.innerHTML = time;
+  }
+  if (time < 1) {
+    window.clearInterval(update);
+  }
+}
+
+update = setInterval("timeFunction()", 1000)
+
+decrementTime = () => {
+  time -= 5;
+  timer.innerHTML = time;
 }
 
 startGame();
